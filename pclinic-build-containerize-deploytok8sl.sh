@@ -4,10 +4,14 @@
 git clone https://github.com/Buchatech/petclinic-k8s.git
 
 ### Navigate to the petclinic directory
-cd spring-petclinic
+cd petclinic-k8s/spring-petclinic
 
 ### Set your DB settings in the application.properties file
-# Update the application.properties file with your DB settings i.e.:
+# Update the application.properties file with your DB settings.
+
+# Path to the application.properties file ./spring-petclinic/src/main/resources
+
+# DB settings for Postgres i.e.:
 
 #--------------------- DB Connection ------------------
 # database=postgres
