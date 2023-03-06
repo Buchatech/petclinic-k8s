@@ -1,5 +1,3 @@
-# https://www.dev-eth0.de/2019/07/29/dockerize-spring-boot-applications/
-
 FROM openjdk:latest
 
 VOLUME /tmp
