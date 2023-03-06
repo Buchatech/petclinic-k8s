@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: petclinic
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: petclinic
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: petclinicdeployment
+  labels:
+    app: petclinic
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: petclinic
+  template:
+    metadata:
+      labels:
+        app: petclinic
+    spec:
+      containers:
+      - name: petclinicapp
+        image: crazk8sehiebdpdv2i7fmty6.azurecr.io/petclinicapp:v0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+      # imagePullSecrets:
+      #    - name: cr-cred
+      #   volumeMounts:
+      #   - name: petclinicconfigvolume
+      #     mountPath: /config
+      # volumes:
+      # - name: petclinicconfigvolume
+      #   configMap:
+      #     name: petclinicconfigmap
