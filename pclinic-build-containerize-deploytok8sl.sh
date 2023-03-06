@@ -35,7 +35,7 @@ docker build -t petclinicapp .
 # docker run -p8080:8080 petclinicapp
 
 ### Log into ACR 
-docker login crazk8sehiebdpdv2i7fmty6.azurecr.io -u crazk8sehiebdpdv2i7fmty6 -p BWp1nDAvCsDuIxrX3Uont/uogVgprtJB
+docker login crukjzk8sehiebdpdv2hesi83m.azurecr.io -u crukjzk8sehiebdpdv2hesi83m -p 1234nDAcHsDuIxrX3Uont/ufsVgprtJB
 
 ### Tag the docker image with ACR
 docker tag petclinicapp crukjzk8sehiebdpdv2hesi83m.azurecr.io/petclinicapp:v0
@@ -59,6 +59,8 @@ docker push crukjzk8sehiebdpdv2hesi83m.azurecr.io/petclinicapp:v0
 #     imagePullPolicy: Always
 #   imagePullSecrets:
 #   - name: cr-cred
+
+# Update the petclinic.yaml file with your Container Registry and image info. 
 
 # For AKS I uploaded the petclinic.yaml file to Azure cloudshell 
 
