@@ -1,7 +1,7 @@
 # Original Git Repo for Petclinic: https://github.com/spring-projects/spring-petclinic
 
 ### Clone the petclinic from Buchatech repo
-git clone https://github.com/spring-projects/spring-petclinic.git
+git clone https://github.com/Buchatech/petclinic-k8s.git
 
 ### Navigate to the petclinic directory
 cd spring-petclinic
@@ -11,9 +11,9 @@ cd spring-petclinic
 
 #--------------------- DB Connection ------------------
 # database=postgres
-# spring.datasource.url=jdbc:postgresql://petclinic-test-3-1-23.postgres.database.azure.com/petclinic
-# spring.datasource.username=petclinicdbadm
-# spring.datasource.password=Yu#rrfy1
+# spring.datasource.url=jdbc:postgresql://petclinicdb1-1ab.postgres.database.azure.com/petclinic
+# spring.datasource.username=dbadms
+# spring.datasource.password=--thsdf#rrgt1
 # # SQL is written to be idempotent so this is safe
 # spring.sql.init.mode=always
 # spring.sql.init.schema-locations=classpath*:db/${database}/schema.sql
@@ -38,10 +38,10 @@ docker build -t petclinicapp .
 docker login crazk8sehiebdpdv2i7fmty6.azurecr.io -u crazk8sehiebdpdv2i7fmty6 -p BWp1nDAvCsDuIxrX3Uont/uogVgprtJB
 
 ### Tag the docker image with ACR
-docker tag petclinicapp crazk8sehiebdpdv2i7fmty6.azurecr.io/petclinicapp:v0
+docker tag petclinicapp crukjzk8sehiebdpdv2hesi83m.azurecr.io/petclinicapp:v0
 
 ### Push the image to ACR
-docker push crazk8sehiebdpdv2i7fmty6.azurecr.io/petclinicapp:v0
+docker push crukjzk8sehiebdpdv2hesi83m.azurecr.io/petclinicapp:v0
 
 ### Deploy to K8s 
 
@@ -55,7 +55,7 @@ docker push crazk8sehiebdpdv2i7fmty6.azurecr.io/petclinicapp:v0
 # spec:
 #   containers:
 #   - name: petclinicapp
-#     image: crazk8sehiebdpdv2i7fmty6.azurecr.io/petclinicapp:v0
+#     image: crukjzk8sehiebdpdv2hesi83m.azurecr.io/petclinicapp:v0
 #     imagePullPolicy: Always
 #   imagePullSecrets:
 #   - name: cr-cred
