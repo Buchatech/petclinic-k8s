@@ -28,6 +28,7 @@ spec:
     spec:
       containers:
       - name: petclinicapp
+        # Update this with your container registery info.
         image: crazk8sehiebdpdv2i7fmty6.azurecr.io/petclinicapp:v0
         imagePullPolicy: Always
         ports:
